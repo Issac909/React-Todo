@@ -6,10 +6,11 @@ import Item from './Todo';
 
 const ToDoList = props => {
     return ( 
-        <div className = 'todo'>
-            {props.toDo.map(item => (
-                <Item key = {item.id} item = {item} markComplete = {props.markComplete} />
-            ))}
+        <div className = 'to-do-list'>
+                {props.toDo.map(item => (
+                    console.log(item),
+                <Item key = {props.key} item = {item} toggleItem = {props.markComplete} toggleComplete = {props.crossOut} />
+                ))}
             <button className = 'clear' onClick = {props.clearList} >
                 Clear List
             </button>
